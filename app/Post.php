@@ -8,4 +8,9 @@ class Post extends Model
 {
     protected $guarded = [];
     //protezione dei campi 
+
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
 }
