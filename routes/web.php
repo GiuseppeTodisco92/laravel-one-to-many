@@ -25,7 +25,9 @@ Route::middleware('auth')
     ->group(function(){
         Route::get('/home', 'HomeController@index')->name('home');
         Route::resource('posts', 'PostController'); //rotta per i post
+        Route::resource('categories', 'CategoryController');
     });
+
 // front office 
 Route::any('{any?}', function(){
     return view('guest.home');
